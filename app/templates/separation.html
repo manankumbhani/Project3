@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .important { color: #336699; }
+    </style>
+{% endblock %}
+{% block content %}
+
+ <div class="p-5 bg-danger text-white rounded">
+      <div class="row">
+        <div class="col-md-2">
+          <img src="{{ url_for('static', filename='images/separation.png') }}" class="rounded float-left w-100" alt="internet" style="display:block;float:right;margin-right:20px;">
+        </div>
+        <div class="col-md-8">
+        <h1 class="display-1">Seperation of Concerns</h1>
+        </div>
+    </div>
+    </div>
+
+
+<div class="container-fluid ">
+  <div class="row d-flex justify-content-around p-2">
+  <div class="col-md-8 p-2 border border-1">
+    <h3>Seperation of concerns</h3>
+    <p>Separation of concerns is a software architecture design pattern/principle for separating an application into distinct sections, so each section addresses a separate concern. At its essence, Separation of concerns is about order. The overall goal of separation of concerns is to establish a well-organized system where each part fulfills a meaningful and intuitive role while maximizing its ability to adapt to change.</p>
+    <p>The Calculator program is implement in such a way that it brings Seperation of Concerns design pattern in play by separating different functions and other utilities.</p>
+    <ul>
+      <li>The Addition class here only implements the function of performing addition of list of floats. which has no effects of any modification in Division or Subtraction classes</li>
+      <img src="{{ url_for('static', filename='images/calc3.png') }}" alt="code">
+      <li> Moreover, In calculations class the function of adding any calculation to history is implemented and to obtain a certain history we can just refer to calculations class here </li>
+      <img src="{{ url_for('static', filename='images/calc1.png') }}" alt="code">
+      <li> In calculator class we can see that the function is created to perform the addition of list of numbers by implementing Addition Method. Here By separating similar functions helps keep related code and functions together.</li>
+      <img src="{{ url_for('static', filename='images/calc4.png') }}" alt="code">
+    </ul>
+    <h3>Some Advantages of implementing Seperation of concerns</h3>
+    <ul>
+      <li>Lack of duplication and singularity of purpose of the individual components render the overall system easier to maintain.</li>
+      <li>The system becomes more stable as a byproduct of the increased maintainability.</li>
+      <li>The strategies required to ensure that each component only concerns itself with a single set of cohesive responsibilities often result in natural extensibility points.</li>
+      <li>The decoupling which results from requiring components to focus on a single purpose leads to components which are more easily reused in other systems, or different contexts within the same system.</li>
+      <li>The increase in maintainability and extensibility can have a major impact on the marketability and adoption rate of the system.</li>
+    </ul>
+</div>
+
+
+
+
+
+
+
+  <div class="col-md-3 p-2 bg-warning border border-1">
+    <img src="{{ url_for('static', filename='images/lego.png') }}" class="rounded float-left w-100" alt="internet">
+
+    <div id="accordion">
+      <div class="card">
+        <div class="card-header">
+          <a class="btn" data-bs-toggle="collapse" href="#collapseOne">
+            What is Separation of Concerns?
+          </a>
+        </div>
+        <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
+          <div class="card-body">
+            Separation of Concerns is a design principle for separating a computer program into distinct sections such that each section addresses a separate concern.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseTwo">
+            Cohesion?
+        </a>
+        </div>
+        <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+          <div class="card-body">
+            Cohesion is the measure of how related a group of things are. In computer science, it's how strong the relationship is between the methods and data of a class.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseThree">
+            Coupling?
+          </a>
+        </div>
+        <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
+          <div class="card-body">
+            Coupling is basically a measure of dependence between two or more classes, modules, or components. Tight coupling is bad, and loose coupling is good.
+          </div>
+        </div>
+      </div>
+
+
+
+
+    </div>
+
+
+
+  </div>
+
+</div>
+</div>
+
+
+
+{% endblock %}

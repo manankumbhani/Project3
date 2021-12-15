@@ -1,0 +1,138 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .important { color: #336699; }
+    </style>
+{% endblock %}
+{% block content %}
+
+ <div class="p-3 bg-danger text-white rounded">
+      <div class="row">
+        <div class="col-md-2">
+          <img src="{{ url_for('static', filename='images/oop.png') }}" class="rounded float-left w-100" alt="Dictionary with face" style="display:block;float:right;margin-right:20px;">
+        </div>
+        <div class="col-md-8">
+        <h1 class="display-1">Object Oriented Programming</h1>
+        </div>
+    </div>
+    </div>
+
+
+<div class="container-fluid ">
+  <div class="row d-flex justify-content-around p-2">
+  <div class="col-md-8 p-2 border border-1">
+
+    <h3>Pylint</h3>
+    <p>Pylint is a Python static code analysis tool which looks for programming errors, helps enforcing a coding standard, sniffs for code smells and offers simple refactoring suggestions.</p>
+    <p>Pep 8 is similar guide that evolves over time as additional conventions are identified and past conventions are rendered obsolete by changes in the language itself.</p>
+    <p>Pylint is meant to be called from the command line. The usage is pylint [options] modules_or_packages</p>
+    <img src="{{ url_for('static', filename='images/pylint.png') }}" alt="Pylint Code">
+    <hr>
+   <br>
+   <h3>OOPs Terms Glossary</h3>
+  <p><span class="glossary">Factory -</span>•	Factory Method is a creational design pattern used to create concrete implementations of a common interface. It separates the process of creating an object from the code that depends on the interface of the object.</p>
+  <p><span class="glossary">Instantiation -</span>Instantiating a class is creating a copy of the class which inherits all class variables and methods. Instantiating a class in Python is simple. To instantiate a class, we simply call the class as if it were a function, passing the arguments that the __init__ method defines. The return value will be the newly created object. The combined process of “make me a new object” and “get its settings initialized to the factory default settings” is called instantiation.</p>
+    <p><span class="glossary">Object - </span>Objects are an encapsulation of variables(attributes) and functions(behavior) into a single entity. Objects get their variables(attributes) and functions(behavior) from classes.</p>
+      <p><span class="glossary">Class - </span>A class is an extensible program-code-template for creating objects, providing initial values for state (member variables) and implementations of behavior (member functions or methods).</p>
+        <p><span class="glossary">Namespace - </span>In Python, namespaces are defined by the individual modules, and since modules can be contained in hierarchical packages, then namespaces are hierarchical too. In general when a module is imported then the names defined in the module are defined via that module's namespace, and are accessed in from the calling modules by using the fully qualified name.</p>
+          <p><span class="glossary">Constructor - </span>The constructor is a method that is called when an object is created. This method is defined in the class and can be used to initialize basic variables. If you create four objects, the class constructor is called four times. Every class has a constructor, but its not required to explicitly define it.</p>
+            <p><span class="glossary">Fixture - </span>In testing, a fixture provides a defined, reliable and consistent context for the tests. This could include environment (for example a database configured with known parameters) or content (such as a dataset).</p>
+              <p><span class="glossary">Type hint - </span>Type hinting is a formal solution to statically indicate the type of a value within your Python code.</p>
+<p><span class="glossary">Type cast - </span>In Python, Type Casting is a process in which we convert a literal of one type to another.</p>
+  <p><span class="glossary">Unit test -</span>Unit testing is a software testing method by which individual units of source code are put under various tests to determine whether they are fit for use. It determines and ascertains the quality of your code.</p>
+    <p><span class="glossary">Static method- </span>Static methods are methods that are related to a class but do not need to access any class-specific data. There is no need to instantiate an instance because we can simply call this method. Static methods are great for utility functions. They are totally self-contained and only work with data passed in as arguments.</p>
+      <p><span class="glossary">Class method - </span>Class methods are methods that are related to a class and have access to all class-specific data. It uses @classmethod, a built-in function decorator that gets evaluated after the function is defined. It returns a class method function. It receives the cls parameter instead of self as the implicit first argument.</p>
+        <p><span class="glossary">Facade - </span>Facade can be recognized in a class that has a simple interface, but delegates most of the work to other classes. Usually, facades manage the full life cycle of objects they use.</p>
+          <p><span class="glossary">Single Responsibility Principle -</span> The Single Responsibility Principle requires that a class should have only one job. So if a class has more than one responsibility, it becomes coupled. A change to one responsibility results to modification of the other responsibility.</p>
+            <p><span class="glossary">Open-Closed Principle -</span> Software entities(Classes, modules, functions) should be open for extension, not modification.</p>
+              <p><span class="glossary">Liskov Substitution Principle - </span>The main idea behind Liskov Subtitution Principle is that, for any class, a client should be able to use any of its subtypes indistinguishably, without even noticing, and therefore without compromising the expected behavior at runtime. This means that clients are completely isolated and unaware of changes in the class hierarchy.</p>
+                <p><span class="glossary">Interface Segregation Principle -</span> Make fine grained interfaces that are client specific Clients should not be forced to depend upon interfaces that they do not use. This principle deals with the disadvantages of implementing big interfaces.</p>
+                  <p><span class="glossary">Dependecy Inversion Principle - </span>Dependency should be on abstractions not concretions. High-level modules should not depend upon low-level modules. Both low and high level classes should depend on the same abstractions. Abstractions should not depend on details. Details should depend upon abstractions.</p>
+                    <p><span class="glossary">Method -</span> A method defines the behavior of the objects that are created from the class. In other words, a method is an action that an object is able to perform.</p>
+                      <p><span class="glossary">Properties -</span> The term describes a one or two functions of a class, which consist of a 'getter' that retrieves a value and a 'setter' that sets a value.</p>
+                        <p><span class="glossary">Superclass - </span>In Inheritance, the existing class from which the new classes are derived is known as the Superclass. It is also known as the parent class or base class.</p>
+                          <p><span class="glossary">Subclass - </span>When implementing inheritance, the class that inherits the properties and methods from the Superclass is the Subclass.</p>
+
+  </div>
+    <div class="col-md-3 p-2 bg-warning border border-1">
+      <img src="{{ url_for('static', filename='images/oops1.png') }}" class="rounded float-left w-100" alt="internet">
+
+      <div id="accordion">
+        <div class="card">
+          <div class="card-header">
+            <a class="btn" data-bs-toggle="collapse" href="#collapseOne">
+              What is Object Oriented Programing?
+            </a>
+          </div>
+          <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
+            <div class="card-body">
+              Object Oriented programming (OOP) is a programming paradigm that relies on the concept of classes and objects. It is used to structure a software program into simple, reusable pieces of code blueprints such as classes, which are used to create individual instances of objects. The 4 major principles that make an language Object Oriented are Encapsulation, Abstraction, Polymorphism and Inheritance.
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseThree">
+              Encapsulation?
+            </a>
+          </div>
+          <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
+            <div class="card-body">
+              The word, “encapsulate,” means to enclose something. Just like a pill "encapsulates" or contains the medication inside of its coating, the principle of encapsulation works in a similar way in OOP: by forming a protective barrier around the information contained within a class from the rest of the code.
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <a class="collapsed btn" data-bs-toggle="collapse" href="#collapsefour">
+              Abstraction?
+            </a>
+          </div>
+          <div id="collapsefour" class="collapse" data-bs-parent="#accordion">
+            <div class="card-body">
+              Abstracting away the gory implementation details of a class and only presenting a clean and easy-to-use interface via the class’ member functions. Carefully used, abstraction helps isolate the impact of changes made to the code, so that if something goes wrong, the change will only affect the implementation details of a class and not the outside code.
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <a class="collapsed btn" data-bs-toggle="collapse" href="#collapsefive">
+              Inheritance?
+            </a>
+          </div>
+          <div id="collapsefive" class="collapse" data-bs-parent="#accordion">
+            <div class="card-body">
+              Object-oriented languages that support classes almost always support the notion of “inheritance.” Classes can be organized into hierarchies, where a class might have one or more parent or child classes. If a class has a parent class, we say it is derived or inherited from the parent class and it represents an “IS-A” type relationship. That is to say, the child class “IS-A” type of the parent class..
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <a class="collapsed btn" data-bs-toggle="collapse" href="#collapsesix">
+              Polymorphism?
+            </a>
+          </div>
+          <div id="collapsesix" class="collapse" data-bs-parent="#accordion">
+            <div class="card-body">
+              In OOP, Polymorphism allows for the uniform treatment of classes in a hierarchy. Therefore, calling code only needs to be written to handle objects from the root of the hierarchy, and any object instantiated by any child class in the hierarchy will be handled in the same way.
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+
+
+
+    </div>
+
+
+
+  </div>
+
+</div>
+
+{% endblock %}

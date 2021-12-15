@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .important { color: #336699; }
+    </style>
+{% endblock %}
+{% block content %}
+    <div class="p-1 bg-danger text-white rounded">
+      <div class="row">
+        <div class="col-md-2">
+          <img src="{{ url_for('static', filename='images/calculator.png') }}" class="rounded float-left w-100" alt="internet" style="display:block;float:right;margin-right:20px;">
+        </div>
+        <div class="col-md-8">
+        <h1 class="display-1">Calculator </h1>
+        <p>Calculator and Object Oriented Principles </p>
+
+      </div>
+    </div>
+    </div>
+
+
+<div class="container-fluid ">
+  <div class="row d-flex justify-content-around p-2">
+  <div class="col-md-8 p-2 border border-1">
+    <p>The calculator program demonstrates the OOPs principles in following ways</p>
+    <p>1. Encapsulation: Encapsulation is accomplished when each object maintains a private state, inside a class. Other objects can not access this state directly, instead, they can only invoke a list of public functions. The object manages its own state via these functions and no other class can alter it unless explicitly allowed. In order to communicate with the object, you will need to utilize the methods provided.</p>
+    <p>For example, In the Calculator program the Calculation class has convert_args_to_list_float method, that performs the conversion of values to list of floats before processing in Addition, Subtraction, etc. which is only available to the class itself not to any other classes.</p>
+
+    <img src="{{ url_for('static', filename='images/calc1.png') }}" class="border border-3" alt="code">
+    <br>
+    <p>2. Abstraction: Abstraction is an extension of encapsulation. It is the process of selecting data from a larger pool to show only the relevant details to the object. Using abstract class/Interface we express the intent of the class rather than the actual implementation. In a way, one class should not know the inner details of another in order to use it, just knowing the interfaces should be good enough.</p>
+    <p>For example, In the Calculator program in the following example given below we turn the tuple value to list of float, we standardize them which is done in abstract class Calculations here</p>
+    <img src="{{ url_for('static', filename='images/calc1.png') }}" class="border border-3" alt="code">
+    <p> Here the array 'history' is created which stores the calculation that is already been performed by calculator program. When a user performs an assertion which leads to add the calculation result to history  and then when tthe clear_history method is called the method will clear the the history array. In the same way after assertion of a calculation if count_history method is called the the calculator will count the length of array and will count the history  </p>
+    <img src="{{ url_for('static', filename='images/calc2.png') }}" class="border border-3" alt="code">
+    <br>
+    <p>3. Inheritance: Inheritance is the ability of one object to acquire some/all properties of another object. For example, a child inherits the traits of his/her parents. With inheritance, reusability is a major advantage. You can reuse the fields and methods of the existing class.</p>
+    <p>For example, In the Calculator program we can see that Addition class inherits Calculations method imported from different class, which turns tuples to list of floats so that we don't have to recycle code for subtraction, multiplication, etc. or any other classes. </p>
+    <img src="{{ url_for('static', filename='images/calc3.png') }}" class="border border-3" alt="code">
+    <br>
+    <p>4. Polymorphism: Polymorphism gives us a way to use a class exactly like its parent so there is no confusion with mixing types. This being said, each child sub-class keeps its own functions/methods as they are.</p>
+    <p>For example, In the Calculator program get_result method inherits from its parent class i.e. Calculation class using the self keyword</p>
+    <img src="{{ url_for('static', filename='images/calc3a.png') }}" class="border border-3" alt="code">
+
+
+
+  </div>
+  <div class="col-md-3 p-2 bg-warning border border-1">
+    <img src="{{ url_for('static', filename='images/oops1.png') }}" class="rounded float-left w-100" alt="internet">
+
+    <div id="accordion">
+      <div class="card">
+        <div class="card-header">
+          <a class="btn" data-bs-toggle="collapse" href="#collapseOne">
+            What is Object Oriented Programing?
+          </a>
+        </div>
+        <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
+          <div class="card-body">
+            Object Oriented programming (OOP) is a programming paradigm that relies on the concept of classes and objects. It is used to structure a software program into simple, reusable pieces of code blueprints such as classes, which are used to create individual instances of objects. The 4 major principles that make an language Object Oriented are Encapsulation, Abstraction, Polymorphism and Inheritance.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseThree">
+            Encapsulation?
+          </a>
+        </div>
+        <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
+          <div class="card-body">
+            The word, “encapsulate,” means to enclose something. Just like a pill "encapsulates" or contains the medication inside of its coating, the principle of encapsulation works in a similar way in OOP: by forming a protective barrier around the information contained within a class from the rest of the code.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <a class="collapsed btn" data-bs-toggle="collapse" href="#collapsefour">
+            Abstraction?
+          </a>
+        </div>
+        <div id="collapsefour" class="collapse" data-bs-parent="#accordion">
+          <div class="card-body">
+            Abstracting away the gory implementation details of a class and only presenting a clean and easy-to-use interface via the class’ member functions. Carefully used, abstraction helps isolate the impact of changes made to the code, so that if something goes wrong, the change will only affect the implementation details of a class and not the outside code.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <a class="collapsed btn" data-bs-toggle="collapse" href="#collapsefive">
+            Inheritance?
+          </a>
+        </div>
+        <div id="collapsefive" class="collapse" data-bs-parent="#accordion">
+          <div class="card-body">
+            Object-oriented languages that support classes almost always support the notion of “inheritance.” Classes can be organized into hierarchies, where a class might have one or more parent or child classes. If a class has a parent class, we say it is derived or inherited from the parent class and it represents an “IS-A” type relationship. That is to say, the child class “IS-A” type of the parent class..
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <a class="collapsed btn" data-bs-toggle="collapse" href="#collapsesix">
+            Polymorphism?
+          </a>
+        </div>
+        <div id="collapsesix" class="collapse" data-bs-parent="#accordion">
+          <div class="card-body">
+            In OOP, Polymorphism allows for the uniform treatment of classes in a hierarchy. Therefore, calling code only needs to be written to handle objects from the root of the hierarchy, and any object instantiated by any child class in the hierarchy will be handled in the same way.
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+</div>
+
+{% endblock %}

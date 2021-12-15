@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .important { color: #336699; }
+    </style>
+{% endblock %}
+{% block content %}
+
+
+ <div class="p-5 bg-danger text-white rounded">
+      <div class="row">
+        <div class="col-md-2">
+          <img src="{{ url_for('static', filename='images/aaa.png') }}" class="rounded float-left w-100" alt="internet" style="display:block;float:right;margin-right:20px;">
+        </div>
+        <div class="col-md-8">
+        <h1 class="display-1">AAA Testing</h1>
+        </div>
+    </div>
+    </div>
+
+
+<div class="container-fluid ">
+  <div class="row d-flex justify-content-around p-2">
+  <div class="col-md-8 p-2 border border-1">
+
+    <div class="row">
+      <div class="col-md-9">
+        <h3>Importance of Testing</h3>
+        <p>As software scales in codebase size, it's impossible for a person or even a large team to keep up with all of the changes and the interactions between the changes. Automated testing is the only proven method for building reliable software once they grow past the point of a simple prototype. Many major software program development failures can be traced back to inadequate or a complete lack of testing.</p>
+      </div>
+      <div class="col-md-3">
+        <img src="{{ url_for('static', filename='images/aaa4.png') }}" class="rounded float-left w-100 h-130" alt="internet" style="display:block;float:right;margin-right:20px;">
+      </div>
+    </div>
+
+    <h3>AAA Testing</h3>
+    <p>The AAA (Arrange-Act-Assert) pattern has become almost a standard across the industry. It suggests that you should divide your test method into three sections: arrange, act and assert. Each one of them only responsible for the part in which they are named after.</p>
+    <h3>Arrange:</h3>
+    <p>The first step of a unit test application. Here we initialize objects, creates mocks with arguments that are passed to the method under test and adds expectations.</p>
+    <h3>Act:</h3>
+    <p>The second step of a unit test application. In this step we invoke the method or property under test with the arranged parameters.</p>
+    <h3>Assert:</h3>
+    <p>The third step of a unit test application. In this step we verify that the action of the method under test behaves as expected.</p>
+    <p>Example of AAA Testing in Python</p>
+    <img src="{{ url_for('static', filename='images/aaa-2.png') }}" alt="code">
+
+  </div>
+  <div class="col-md-3 p-2 bg-warning border border-1">
+    <img src="{{ url_for('static', filename='images/aaa3.png') }}" class="rounded float-left w-100" alt="internet">
+
+    <div id="accordion">
+      <div class="card">
+        <div class="card-header">
+          <a class="btn" data-bs-toggle="collapse" href="#collapseOne">
+            What is AAA Testing?
+          </a>
+        </div>
+        <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
+          <div class="card-body">
+            AAA Testing is the pattern focuses each test on a single action. The advantage of this focus is that it clearly separates the arrangement of the System Under Test (SUT) and the assertions that are made on it after the action.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseThree">
+            Arrange:
+          </a>
+        </div>
+        <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
+          <div class="card-body">
+            The Arrange section of a unit test method initializes objects and sets the value of the data that is passed to the method under test.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <a class="collapsed btn" data-bs-toggle="collapse" href="#collapsefour">
+            Act:
+          </a>
+        </div>
+        <div id="collapsefour" class="collapse" data-bs-parent="#accordion">
+          <div class="card-body">
+            The Act section invokes the method under test with the arranged parameters.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <a class="collapsed btn" data-bs-toggle="collapse" href="#collapsefive">
+            Assert:
+          </a>
+        </div>
+        <div id="collapsefive" class="collapse" data-bs-parent="#accordion">
+          <div class="card-body">
+            The Assert section verifies that the action of the method under test behaves as expected.
+          </div>
+        </div>
+      </div>
+
+
+
+
+    </div>
+
+
+
+  </div>
+
+</div>
+</div>
+
+{% endblock %}

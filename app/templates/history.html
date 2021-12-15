@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .important {
+            color: #336699;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+
+    <h1 align="center">Calculator History</h1>
+       {% if result %}
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                    <th scope="col">Record</th>
+                    <th scope="col">Operation</th>
+                    <th scope="col">Value 1</th>
+                    <th scope="col">Value 2</th>
+                    <th scope="col">Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in result %}
+                        <tr>
+                            <th scope="row">{{ item[1]['id'] }}</th>
+                            <td>{{ item[1]['operation'] }}</td>
+                            <td>{{ item[1]['value0'] }}</td>
+                            <td>{{ item[1]['value1'] }}</td>
+                            <td>{{ item[1]['result'] }}</td>
+                        </tr>
+                    {% endfor %}
+
+                </tbody>
+            </table>
+
+       {% else %}
+         <table class="table table-striped">
+                <thead>
+                    <tr>
+                    <th scope="col">Record</th>
+                    <th scope="col">Operation</th>
+                    <th scope="col">Value 1</th>
+                    <th scope="col">Value 2</th>
+                    <th scope="col">Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <th style="text-align: center;" colspan="5">N/A</th>
+                        </tr>
+
+                </tbody>
+            </table>
+       {% endif %}
+
+
+{% endblock %}

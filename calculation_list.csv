@@ -1,0 +1,15 @@
+id,operation,value0,value1,result
+1,Addition,1.0,2.0,3.0
+2,Addition,2.0,5.0,7.0
+3,Multiplication,2.0,5.0,10.0
+4,Division,1.0,3.0,0.3333333333333333
+5,Division,88.0,5.0,17.6
+6,Subtraction,0.0,1.0,-1.0
+7,Addition,2.0,3.0,5.0
+8,Multiplication,3.0,4.0,12.0
+9,Division,4.0,2.0,2.0
+10,Division,4.0,5.0,0.8
+11,Subtraction,0.0,1.0,-1.0
+12,Addition,2.0,2.0,4.0
+13,Addition,2.0,5.0,7.0
+14,Addition,2.0,3.0,5.0

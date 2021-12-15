@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .important {
+            color: #336699;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+
+    <div class="row">
+			<div class="col-md-4"></div>
+			<div align="center" class="col-md-4"><legend><h1>MY CALCULATOR</h1></legend></div>
+			<div class="col-md-4"></div>
+		</div>
+
+     {% if error %}
+         <div class="alert alert-danger error" role="alert">
+             {{ error }}
+        </div>
+      {% endif %}
+  <div class="mb-3 row">
+<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4"><hr>
+    <form class="form-horizontal" action="/calculator" method="POST">
+        <label for="value1" class="col-sm-3 col-form-label">Enter Value 1:</label><br>
+        <input type="number" class="form-control" name="value1" placeholder="&nbsp;Please enter a value">
+        <label for="value2" class="col-sm-3 col-form-label">Enter Value 2:</label><br>
+        <input type="number" class="form-control" name="value2" placeholder="&nbsp;Please enter a value">
+        <legend class="col-sm-3 col-form-label">Operation:</legend>
+                         <div class="col-xs-5">
+                			<select class="form-control" name="operation">
+                    			<option type="radio" name="operation" id="addition" value="addition" checked>Addition</option>
+                    			<option type="radio" name="operation" id="subtraction" value="subtraction">Subtraction</option>
+                    			<option type="radio" name="operation" id="multiplication" value="multiplication">Multiplication</option>
+                    			<option type="radio" name="operation" id="division" value="division">Division</option>
+                			</select>
+            			</div>
+                    <br>
+
+                    <div align="center" class="form-group">
+            			<div class="col-xs-offset-3 col-xs-9">
+                			<input type="submit" class="btn btn-success" value="Submit">
+                			<input type="reset" class="btn btn-danger" value="Reset">
+            			</div>
+        			</div>
+
+    </form><br>
+  </div>
+</div>
+  </div>
+{% endblock %}
